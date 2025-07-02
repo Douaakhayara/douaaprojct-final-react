@@ -47,10 +47,9 @@ const products = [
 ];
 
 const Shop = () => {
-  // الحالة باش نعرفوا شكون المختار دابا (null إذا ماكاينش)
+  
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  // دالة تغير الاختيار (تبدل أو تلغي)
   const toggleCategory = (name) => {
     if (selectedCategory === name) {
       setSelectedCategory(null);
