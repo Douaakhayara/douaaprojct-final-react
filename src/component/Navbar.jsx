@@ -5,6 +5,9 @@ import { CiInstagram } from "react-icons/ci";
 import { FaTwitter } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
 import { FaGoogle } from "react-icons/fa";
+import { FaRegUserCircle } from "react-icons/fa";
+import { MdOutlineShoppingBag } from "react-icons/md";
+
 
 
 const Navbar = () => {
@@ -30,7 +33,7 @@ const Navbar = () => {
         <span>contact@example.com</span>
       </div>
        
-             <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 gap-5">
+          <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 gap-5">
           <nav className="flex justify-center items-center gap-[30vw] navbar" >
           <div className="text-2xl font-bold tracking-wide uppercase text-gray-900 flex">
             Fashe <span className="text-red-600 size-7">.</span>
@@ -56,6 +59,10 @@ const Navbar = () => {
                 <Link className=" hover:border-b-2" to={{ pathname: '/contact' }}>
           <li>Contact</li>
         </Link>
+        <Link to={"/contact1"}>
+        <FaRegUserCircle className="w-20 text-[25px]"/>
+        </Link>
+        <MdOutlineShoppingBag className="text-[25px]"/>
       </ul>
     </nav>
 </div>

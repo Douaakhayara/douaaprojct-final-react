@@ -1,5 +1,6 @@
 import React from "react";
 import { images } from "../constant/images";
+import { Link } from "react-router-dom";
 
 
 const leftBigItems = [
@@ -34,10 +35,12 @@ const Blog= () => {
    
         <div className="flex flex-col gap-8 w-full md:w-1/2">
           {leftBigItems.map(({ id, image, text }) => (
+            <Link to={`/blog1/${id}`}>
             <div key={id} className="flex flex-col items-center w-[900px] hover:scale-90">
               <img src={image} alt={text} className="w-full h-auto rounded-lg object-cover" />
               <p className="mt-2 text-lg  text-center">{text}</p>
-            </div>
+            </div> 
+            </Link>
           ))}
         </div>
 

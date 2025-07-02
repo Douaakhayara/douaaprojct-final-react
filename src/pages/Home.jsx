@@ -134,7 +134,9 @@ const Home = () => {
       <section className="mt-16 px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         {services.map(({ id, name, image }) => (
           <div key={id} className="p-6 border rounded-lg shadow hover:shadow-lg transition relative">
-            <img src={image} alt={name} className="w-full h-64 object-cover hover:scale-95" />
+      <div className="overflow-hidden">
+              <img src={image} alt={name} className="w-full h-64 object-cover hover:scale-120" />
+      </div>
     <Link to={"/shop"}>
             <button className="p-2 px-10 bg-white text-black absolute bottom-10 right-30 hover:bg-red-500">watch</button>
     </Link>
@@ -152,7 +154,7 @@ const Home = () => {
             <Link to={"/shop"}>
               <img src={image} alt="" className="w-full h-100 object-cover transition-opacity duration-300" />
               <button className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900/20 text-black font-bold p-2 px-10 rounded">
-                new shop
+               <span className="bg-yellow-100 p-3 rounded-[50px]"> new shop</span>
               </button>
             </Link>
               <div className="p-4">
